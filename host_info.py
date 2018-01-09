@@ -52,15 +52,17 @@ issued_to = subject['commonName']
 issuer = dict(x[0] for x in cert['issuer'])
 issued_by = issuer['commonName']
 valid_to =  cert['notAfter']
-san = cert['subjectAltName']
+#san = cert['subjectAltName']
 
 print ("Server certificate issued to:", issued_to)
 print ("Server certificate issued by:", issuer['commonName'])
 print ("Valid to::", valid_to) 
-print ("SubjectAltName", san)
+#print ("SubjectAltName", san)
 
 #Get WHOIS info for selected domain
 
 w = whois.whois(addr)
 print ("WHOIS-STATUS:", w['status'])
 print ("Is host using DNSSEC:", w['dnssec'])
+print ("Expiration date:", w['expiration_date'])
+print ("Name Servers:", w['name_servers'])
