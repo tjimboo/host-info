@@ -4,7 +4,7 @@ data returned is in the format:
 @filename 
 @version 1.01 (python ver 2.7.3)
 @author tjimboo
-fqdn2 = socket.gethostbyname('cu.bankid.com')
+fqdn2 = socket.gethostbyname('tls.pki.nu')
 """
 #import socket
 import sys
